@@ -2,6 +2,7 @@
 class Database 
 {
 	private static $dbName = 'crud_tutorial' ; 
+	private static $dbName = 'sistema_gestion' ; 
 	private static $dbHost = 'localhost' ;
 	private static $dbUsername = 'root';
 	private static $dbUserPassword = 'root';

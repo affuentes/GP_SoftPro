@@ -106,6 +106,7 @@
             this.Empleado.TabIndex = 21;
             this.Empleado.Text = "Citas";
             this.Empleado.UseVisualStyleBackColor = false;
+            this.Empleado.Click += new System.EventHandler(this.Empleado_Click);
             // 
             // Cliente
             // 

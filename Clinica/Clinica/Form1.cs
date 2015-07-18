@@ -28,5 +28,11 @@ namespace Clinica
         {
             label2.Text = DateTime.Now.ToString();
         }
+
+        private void Empleado_Click(object sender, EventArgs e)
+        {
+            Citas c = new Citas();
+            c.ShowDialog();
+        }
     }
 }

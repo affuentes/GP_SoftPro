@@ -53,7 +53,7 @@
             this.Centro_acopio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Centro_acopio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Centro_acopio.ForeColor = System.Drawing.Color.White;
-            this.Centro_acopio.Location = new System.Drawing.Point(378, 106);
+            this.Centro_acopio.Location = new System.Drawing.Point(608, 270);
             this.Centro_acopio.Name = "Centro_acopio";
             this.Centro_acopio.Size = new System.Drawing.Size(104, 97);
             this.Centro_acopio.TabIndex = 19;
@@ -68,14 +68,14 @@
             this.Reportes.Dock = System.Windows.Forms.DockStyle.Top;
             this.Reportes.Location = new System.Drawing.Point(0, 0);
             this.Reportes.Name = "Reportes";
-            this.Reportes.Size = new System.Drawing.Size(768, 88);
+            this.Reportes.Size = new System.Drawing.Size(1386, 88);
             this.Reportes.TabIndex = 23;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(417, 0);
+            this.panel4.Location = new System.Drawing.Point(1035, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(351, 88);
             this.panel4.TabIndex = 5;
@@ -100,7 +100,7 @@
             this.Empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Empleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Empleado.ForeColor = System.Drawing.Color.White;
-            this.Empleado.Location = new System.Drawing.Point(437, 209);
+            this.Empleado.Location = new System.Drawing.Point(667, 373);
             this.Empleado.Name = "Empleado";
             this.Empleado.Size = new System.Drawing.Size(104, 97);
             this.Empleado.TabIndex = 21;
@@ -115,7 +115,7 @@
             this.Cliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cliente.ForeColor = System.Drawing.Color.White;
-            this.Cliente.Location = new System.Drawing.Point(313, 209);
+            this.Cliente.Location = new System.Drawing.Point(543, 373);
             this.Cliente.Name = "Cliente";
             this.Cliente.Size = new System.Drawing.Size(104, 97);
             this.Cliente.TabIndex = 20;
@@ -127,9 +127,9 @@
             this.panel3.BackColor = System.Drawing.Color.SteelBlue;
             this.panel3.Controls.Add(this.Salir);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 338);
+            this.panel3.Location = new System.Drawing.Point(0, 710);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(768, 78);
+            this.panel3.Size = new System.Drawing.Size(1386, 78);
             this.panel3.TabIndex = 22;
             // 
             // Salir
@@ -141,7 +141,7 @@
             this.Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Salir.ForeColor = System.Drawing.Color.White;
             this.Salir.Image = ((System.Drawing.Image)(resources.GetObject("Salir.Image")));
-            this.Salir.Location = new System.Drawing.Point(678, 0);
+            this.Salir.Location = new System.Drawing.Point(1296, 0);
             this.Salir.Name = "Salir";
             this.Salir.Size = new System.Drawing.Size(90, 78);
             this.Salir.TabIndex = 12;
@@ -172,7 +172,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(768, 416);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.Centro_acopio);
             this.Controls.Add(this.Reportes);
             this.Controls.Add(this.Empleado);

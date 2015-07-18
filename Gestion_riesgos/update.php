@@ -14,15 +14,7 @@
 	if ( !empty($_POST)) {
 		// keep track validation errors
 		$fechaError = null;
-		$riesgoError = null;
-		$faseError = null;
-		$estadoError = null;
-		$accionError = null;
 		$seguimientoError = null;
-		$nivelError = null;
-		$responsableError = null;
-		$impactoError = null;
-		$probabilidadError = null;
 		
 		// keep track post values
 		$fecha = $_POST['fecha'];
@@ -43,20 +35,11 @@
 			$valid = false;
 		}
 
-		if (empty($riesgos)) {
-			$riesgosError = 'Ingrese Riesgo';
-			$valid = false;
-		}
-
-		if (empty($seguimiento)) {
-			$seguimientoError = 'Please enter Name';
-			$valid = false;
-		}
 		// update data
 		if ($valid) {
 			$pdo = Database::connect();
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$sql = "UPDATE customers  set fecha = ?, riesgos = ?, fase =?, estado = ?, accion = ?, seguimiento = ?, nivel = ?, responsable = ?, impacto = ?, probabilidad = ? WHERE id = ?";
+			$sql = "UPDATE riesgos  set fecha = ?, riesgos = ?, fase =?, estado = ?, accion = ?, seguimiento = ?, nivel = ?, responsable = ?, impacto = ?, probabilidad = ? WHERE id = ?";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($fecha,$riesgos,$fase,$estado,$accion,$seguimiento,$nivel,$responsable,$impacto,$probabilidad,$id));
 			Database::disconnect();
@@ -65,7 +48,7 @@
 	} else {
 		$pdo = Database::connect();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$sql = "SELECT * FROM customers where id = ?";
+		$sql = "SELECT * FROM riesgos where id = ?";
 		$q = $pdo->prepare($sql);
 		$q->execute(array($id));
 		$data = $q->fetch(PDO::FETCH_ASSOC);
@@ -102,97 +85,91 @@
 		    		</div>
     		
 	    			<form class="form-horizontal" action="update.php?id=<?php echo $id?>" method="post">
-					   <div class="control-group <?php echo !empty($fechaError)?'error':'';?>">
+					 <div class="control-group">
 					    <label class="control-label">Fecha</label>
 					    <div class="controls">
-					      	<input name="fecha" type="text"  required  value="<?php echo !empty($fecha)?$fecha:'';?>">
-					      	<?php if (!empty($fechaError)): ?>
-					      		<span class="help-inline"><?php echo $fechaError;?></span>
-					      	<?php endif; ?>
+					      	<input name="fecha" type="date"  required  value="fecha">   	
 					    </div>
 					  </div>
-					   <div class="control-group <?php echo !empty($riesgosError)?'error':'';?>">
+					   <div class="control-group">
 					    <label class="control-label">Riesgo</label>
-					    <div class="controls">
-					      	<input name="riesgos" type="text"  required  value="<?php echo !empty($riesgos)?$riesgos:'';?>">
-					      	<?php if (!empty($riesgosError)): ?>
-					      		<span class="help-inline"><?php echo $riesgoError;?></span>
-					      	<?php endif; ?>
+					    	<div class="form-control">
+					    	<textarea name="riesgos" type="text"  required  value="riesgos"></textarea>
 					    </div>
 					  </div>
-					  <div class="control-group <?php echo !empty($faseError)?'error':'';?>">
-					    <label class="control-label">Fase</label>
-					    <div class="controls">
-					      	<input name="fase" type="text" required  value="<?php echo !empty($fase)?$fase:'';?>">
-					      	<?php if (!empty($faseError)): ?>
-					      		<span class="help-inline"><?php echo $faseError;?></span>
-					      	<?php endif; ?>
-					    </div>
+					  <div class="control-group">
+					  <div class="form-group">
+                		<label class="control-label">Fases</label>
+                			<select class="form-control" name="fase">
+		                	<option value ="">Seleccionar</option>
+		                  	<option value ="Analisis">Analisis</option>
+							<option value ="Planeacion">Planeacion</option>
+							<option value ="Ejecucion">Ejecucion</option>
+							<option value ="Evaluacion">Evaluacion</option>
+		               		</select>
 					  </div>
-					  <div class="control-group <?php echo !empty($estadoError)?'error':'';?>">
-					    <label class="control-label">Estado</label>
-					    <div class="controls">
-					      	<input name="estado" type="text"  required  value="<?php echo !empty($estado)?$estado:'';?>">
-					      	<?php if (!empty($estadoError)): ?>
-					      		<span class="help-inline"><?php echo $estadoError;?></span>
-					      	<?php endif; ?>
-					    </div>
+					  <div class="form-group">
+                		<label class="control-label">Estado</label>
+                			<select class="form-control" name="estado">
+		                	<option value ="">Seleccionar</option>
+		                  	<option value ="Analisis">Activo</option>
+							<option value ="Planeacion">Terminado</option>
+		               		</select>
 					  </div>
-					  <div class="control-group <?php echo !empty($accionError)?'error':'';?>">
-					    <label class="control-label">Accion</label>
-					    <div class="controls">
-					      	<input name="accion" type="text"  required  value="<?php echo !empty($accion)?$accion:'';?>">
-					      	<?php if (!empty($accionError)): ?>
-					      		<span class="help-inline"><?php echo $accionError;?></span>
-					      	<?php endif; ?>
-					    </div>
+					  <div class="form-group">
+                		<label class="control-label">Accion</label>
+                			<select class="form-control" name="accion">
+		                	<option value ="">Seleccionar</option>
+		                  	<option value ="Mitigar">Mitigar</option>
+							<option value =""></option>
+		               		</select>
 					  </div>
 					  <div class="control-group <?php echo !empty($seguimientoError)?'error':'';?>">
 					    <label class="control-label">Seguimiento</label>
 					    <div class="controls">
-					      	<input name="seguimiento" type="text"  required  value="<?php echo !empty($seguimiento)?$seguimiento:'';?>">
-					      	<?php if (!empty($seguimientoError)): ?>
-					      		<span class="help-inline"><?php echo $seguimientoError;?></span>
-					      	<?php endif; ?>
+					      	<textarea name="seguimiento" type="text"  required  value="<?php echo !empty($seguimiento)?$seguimiento:'';?>"></textarea>
 					    </div>
 					  </div>
-					  <div class="control-group <?php echo !empty($nivelError)?'error':'';?>">
-					    <label class="control-label">Nivel</label>
-					    <div class="controls">
-					      	<input name="nivel" type="text"  required  value="<?php echo !empty($nivel)?$nivel:'';?>">
-					      	<?php if (!empty($accionError)): ?>
-					      		<span class="help-inline"><?php echo $nivelError;?></span>
-					      	<?php endif; ?>
-					    </div>
+					  <div class="control-group">
+					  <div class="form-group">
+                		<label class="control-label">Nivel</label>
+                			<select class="form-control" name="nivel">
+		                	<option value ="">Seleccionar</option>
+		                  	<option value ="Alto">Alto</option>
+							<option value ="Medio">Medio</option>
+							<option value ="Bajo">Bajo</option>
+		               		</select>
 					  </div>
-					  <div class="control-group <?php echo !empty($responsableError)?'error':'';?>">
-					    <label class="control-label">Responsable</label>
-					    <div class="controls">
-					      	<input name="responsable" type="text"  required  value="<?php echo !empty($responsable)?$responsable:'';?>">
-					      	<?php if (!empty($responsableError)): ?>
-					      		<span class="help-inline"><?php echo $responsableError;?></span>
-					      	<?php endif; ?>
-					    </div>
+					  <div class="control-group">
+					  <div class="form-group">
+                		<label class="control-label">Responsable</label>
+                			<select class="form-control" name="responsable">
+		                	<option value ="">Seleccionar</option>
+		                  	<option value ="Lider Gestion">Lider Gestion</option>
+							<option value ="Analista">Analista</option>
+							<option value ="Programador">Programador</option>
+		               		</select>
 					  </div>
-					  <div class="control-group <?php echo !empty($impactoError)?'error':'';?>">
-					    <label class="control-label">Impacto</label>
-					    <div class="controls">
-					      	<input name="impacto" type="text"  required  value="<?php echo !empty($impacto)?$impacto:'';?>">
-					      	<?php if (!empty($impactoError)): ?>
-					      		<span class="help-inline"><?php echo $impactoError;?></span>
-					      	<?php endif; ?>
-					    </div>
+					  <div class="control-group">
+					  <div class="form-group">
+                		<label class="control-label">Impacto</label>
+                			<select class="form-control" name="impacto">
+		                	<option value ="">Seleccionar</option>
+		                  	<option value ="Alto">Alto</option>
+							<option value ="Medio">Medio</option>
+							<option value ="Bajo">Bajo</option>
+		               		</select>
 					  </div>
-					  <div class="control-group <?php echo !empty($probabilidadError)?'error':'';?>">
 					    <label class="control-label">Probabilidad</label>
-					    <div class="controls">
-					      	<input name="probabilidad" type="text" required  value="<?php echo !empty($probabilidad)?$probabilidad:'';?>">
-					      	<?php if (!empty($probabilidadError)): ?>
-					      		<span class="help-inline"><?php echo $probabilidadError;?></span>
-					      	<?php endif;?>
-					    </div>
+		                <select class="form-control" name="probabilidad">
+		                    <option value ="">Seleccionar</option>
+		                    <option value ="Muy Alto">Muy Alto</option>
+		                    <option value ="Alto">Alto</option>
+		                    <option value ="Medio">Medio</option>
+		                    <option value ="Bajo">Bajo</option>
+		                </select>
 					  </div>
-					  <div class="form-actions">
+					  <div class="form-actions">  
 						  <button type="submit" class="btn btn-success">Modificar</button>
 						  <a class="btn" href="index.php">Volver</a>
 						</div>

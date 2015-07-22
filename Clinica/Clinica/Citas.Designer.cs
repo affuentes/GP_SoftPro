@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Citas));
             this.Reportes = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -41,6 +42,7 @@
             this.BEditar = new System.Windows.Forms.Button();
             this.BGuardar = new System.Windows.Forms.Button();
             this.BCancelar = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Reportes.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -225,6 +227,12 @@
             this.BCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BCancelar.UseVisualStyleBackColor = false;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 200;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,5 +273,6 @@
         public System.Windows.Forms.Button BEditar;
         public System.Windows.Forms.Button BGuardar;
         public System.Windows.Forms.Button BCancelar;
+        public System.Windows.Forms.Timer timer1;
     }
 }

@@ -53,7 +53,7 @@
             this.Centro_acopio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Centro_acopio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Centro_acopio.ForeColor = System.Drawing.Color.White;
-            this.Centro_acopio.Location = new System.Drawing.Point(608, 270);
+            this.Centro_acopio.Location = new System.Drawing.Point(652, 276);
             this.Centro_acopio.Name = "Centro_acopio";
             this.Centro_acopio.Size = new System.Drawing.Size(104, 97);
             this.Centro_acopio.TabIndex = 19;
@@ -111,7 +111,7 @@
             this.Empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Empleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Empleado.ForeColor = System.Drawing.Color.White;
-            this.Empleado.Location = new System.Drawing.Point(667, 373);
+            this.Empleado.Location = new System.Drawing.Point(711, 379);
             this.Empleado.Name = "Empleado";
             this.Empleado.Size = new System.Drawing.Size(104, 97);
             this.Empleado.TabIndex = 21;
@@ -127,7 +127,7 @@
             this.Cliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cliente.ForeColor = System.Drawing.Color.White;
-            this.Cliente.Location = new System.Drawing.Point(543, 373);
+            this.Cliente.Location = new System.Drawing.Point(587, 379);
             this.Cliente.Name = "Cliente";
             this.Cliente.Size = new System.Drawing.Size(104, 97);
             this.Cliente.TabIndex = 20;

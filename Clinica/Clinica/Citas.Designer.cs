@@ -241,6 +241,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Citas";
             this.Text = "Citas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Reportes.ResumeLayout(false);
             this.Reportes.PerformLayout();
             this.panel4.ResumeLayout(false);

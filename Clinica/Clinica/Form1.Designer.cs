@@ -133,6 +133,7 @@
             this.Cliente.TabIndex = 20;
             this.Cliente.Text = "Medicos";
             this.Cliente.UseVisualStyleBackColor = false;
+            this.Cliente.Click += new System.EventHandler(this.Cliente_Click);
             // 
             // panel3
             // 

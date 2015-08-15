@@ -34,5 +34,11 @@ namespace Clinica
             Citas c = new Citas();
             c.ShowDialog();
         }
+
+        private void Cliente_Click(object sender, EventArgs e)
+        {
+            Doctores d = new Doctores();
+            d.ShowDialog();
+        }
     }
 }

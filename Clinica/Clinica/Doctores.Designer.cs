@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Doctores));
             this.Salir = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -37,7 +38,14 @@
             this.BCancelar = new System.Windows.Forms.Button();
             this.BEditar = new System.Windows.Forms.Button();
             this.BGuardar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Reportes = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
+            this.Reportes.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // Salir
@@ -78,7 +86,7 @@
             this.BNuevo.ForeColor = System.Drawing.Color.White;
             this.BNuevo.Image = ((System.Drawing.Image)(resources.GetObject("BNuevo.Image")));
             this.BNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BNuevo.Location = new System.Drawing.Point(968, 390);
+            this.BNuevo.Location = new System.Drawing.Point(414, 544);
             this.BNuevo.Name = "BNuevo";
             this.BNuevo.Size = new System.Drawing.Size(87, 97);
             this.BNuevo.TabIndex = 24;
@@ -96,7 +104,7 @@
             this.BBuscar.ForeColor = System.Drawing.Color.White;
             this.BBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BBuscar.Image")));
             this.BBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BBuscar.Location = new System.Drawing.Point(1399, 390);
+            this.BBuscar.Location = new System.Drawing.Point(845, 544);
             this.BBuscar.Name = "BBuscar";
             this.BBuscar.Size = new System.Drawing.Size(87, 97);
             this.BBuscar.TabIndex = 28;
@@ -114,7 +122,7 @@
             this.BEliminar.ForeColor = System.Drawing.Color.White;
             this.BEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BEliminar.Image")));
             this.BEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BEliminar.Location = new System.Drawing.Point(1509, 390);
+            this.BEliminar.Location = new System.Drawing.Point(955, 544);
             this.BEliminar.Name = "BEliminar";
             this.BEliminar.Size = new System.Drawing.Size(87, 97);
             this.BEliminar.TabIndex = 29;
@@ -132,7 +140,7 @@
             this.BCancelar.ForeColor = System.Drawing.Color.White;
             this.BCancelar.Image = ((System.Drawing.Image)(resources.GetObject("BCancelar.Image")));
             this.BCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BCancelar.Location = new System.Drawing.Point(1179, 390);
+            this.BCancelar.Location = new System.Drawing.Point(625, 544);
             this.BCancelar.Name = "BCancelar";
             this.BCancelar.Size = new System.Drawing.Size(87, 97);
             this.BCancelar.TabIndex = 26;
@@ -150,7 +158,7 @@
             this.BEditar.ForeColor = System.Drawing.Color.White;
             this.BEditar.Image = ((System.Drawing.Image)(resources.GetObject("BEditar.Image")));
             this.BEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BEditar.Location = new System.Drawing.Point(1289, 390);
+            this.BEditar.Location = new System.Drawing.Point(735, 544);
             this.BEditar.Name = "BEditar";
             this.BEditar.Size = new System.Drawing.Size(87, 97);
             this.BEditar.TabIndex = 27;
@@ -168,7 +176,7 @@
             this.BGuardar.ForeColor = System.Drawing.Color.White;
             this.BGuardar.Image = ((System.Drawing.Image)(resources.GetObject("BGuardar.Image")));
             this.BGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BGuardar.Location = new System.Drawing.Point(1069, 390);
+            this.BGuardar.Location = new System.Drawing.Point(515, 544);
             this.BGuardar.Name = "BGuardar";
             this.BGuardar.Size = new System.Drawing.Size(87, 97);
             this.BGuardar.TabIndex = 25;
@@ -176,12 +184,62 @@
             this.BGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BGuardar.UseVisualStyleBackColor = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(0, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 33);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "label2";
+            // 
+            // Reportes
+            // 
+            this.Reportes.BackColor = System.Drawing.Color.SteelBlue;
+            this.Reportes.Controls.Add(this.panel4);
+            this.Reportes.Controls.Add(this.label1);
+            this.Reportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Reportes.Location = new System.Drawing.Point(0, 0);
+            this.Reportes.Name = "Reportes";
+            this.Reportes.Size = new System.Drawing.Size(2744, 88);
+            this.Reportes.TabIndex = 30;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(2393, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(351, 88);
+            this.panel4.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(297, 73);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Doctores";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Doctores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2744, 780);
+            this.Controls.Add(this.Reportes);
             this.Controls.Add(this.BNuevo);
             this.Controls.Add(this.BBuscar);
             this.Controls.Add(this.BEliminar);
@@ -194,6 +252,10 @@
             this.Text = "Doctores";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel3.ResumeLayout(false);
+            this.Reportes.ResumeLayout(false);
+            this.Reportes.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -208,5 +270,10 @@
         public System.Windows.Forms.Button BCancelar;
         public System.Windows.Forms.Button BEditar;
         public System.Windows.Forms.Button BGuardar;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Panel Reportes;
+        private System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Timer timer1;
     }
 }

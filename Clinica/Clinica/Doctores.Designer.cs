@@ -43,7 +43,7 @@
             this.Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Salir.ForeColor = System.Drawing.Color.White;
             this.Salir.Image = ((System.Drawing.Image)(resources.GetObject("Salir.Image")));
-            this.Salir.Location = new System.Drawing.Point(1203, 0);
+            this.Salir.Location = new System.Drawing.Point(2654, 0);
             this.Salir.Name = "Salir";
             this.Salir.Size = new System.Drawing.Size(90, 78);
             this.Salir.TabIndex = 12;
@@ -59,14 +59,15 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 702);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1293, 78);
+            this.panel3.Size = new System.Drawing.Size(2744, 78);
             this.panel3.TabIndex = 23;
             // 
             // Doctores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1293, 780);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(2744, 780);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Doctores";
